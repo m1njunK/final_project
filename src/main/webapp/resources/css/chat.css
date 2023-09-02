@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+    .mainWrap {
+        text-align: center;
+        padding: 20px 5%;
+        position: relative;
+    }
+    #userList {
+	    width: 250px;
+	    padding: 10px;
+	    border: 1px solid #ccc;
+	    border-radius: 5px;
+	    margin-top: 20px;
+	    position: absolute;
+	    top: 85px;
+	    text-align: left;
+	}
+	
+	#userList h4 {
+	    margin-bottom: 10px;
+	}
+	
+	#userList ul {
+	    list-style: none;
+	    padding: 0;
+	    text-align: left;
+	}
+	
+	#userList li {
+	    margin-bottom: 5px;
+	}
+	    
+    #titleBox {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    #chatList {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        width: 60%;
+        margin: 0 auto;
+    }
+    .chatRoomBox {
+        border: 1px solid black;
+        padding: 20px;
+        text-align: center;
+        background-color: #ffffff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease-in-out;
+        border-radius: 10px;
+    }
+    .chatRoomBox:hover {
+        transform: translateY(-5px);
+        cursor: pointer;
+    }
+	.createButton {
+	     display: inline-block;
+	     margin-top: 20px;
+	     background-color: #3498db;
+	     color: #ffffff;
+	     border: none;
+	     padding: 10px 20px;
+	     border-radius: 5px;
+	     font-size: 16px;
+	     cursor: pointer;
+	     transition: background-color 0.2s ease-in-out;
+	     float: right;
+	 }
+    .createButton:hover {
+        background-color: #0056b3;
+    }
+
+	/* 채팅방  */
+    .chat-message-area {
+        height: 700px; 
+        overflow-y: auto;
+    }
+    
+    .chat-container {
+   		width: 45%;
+   		padding: 1%;
+   		border: 1px solid #ddd;
+   		border-radius: 10px;
+   		
+    }
+    
+    .input-col {
+    	display: flex;
+    	justify-content: flex-end;
+    }
+    
+    .input-group {
+    	width: 50%;
+    }
+    
+    #button-send{
+    	background: #3498db;
+    }
+    
+    .message-bubble {
+	    opacity: 0; 
+	    animation: fade-in 0.5s ease forwards; 
+	    margin-bottom: 10px; 
+	}
+
+	@keyframes fade-in {
+	  0% {
+	    opacity: 0; 
+	    transform: translateY(10px); 
+	  }
+	  100% {
+	    opacity: 1; 
+	    transform: translateY(0);
+	  }
+	}
+	
+	a{
+		text-decoration: none;
+	}

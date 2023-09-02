@@ -1,0 +1,280 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    position: relative;
+    border: none;
+}
+
+img {
+    border: none;
+    display: block;
+    float: left;
+}
+
+button {
+    display: block;
+    float: left;
+}
+
+#cover {
+    width: 100%;
+    height: 100%;
+    min-width: 1080px;
+    min-height: 960px;
+    position: absolute;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+#close {
+	background: #ff0000a1;
+	font-size: 15pt;
+    float: right;
+    border: solid 2px black;
+    width: 50px;
+    z-index: 3;
+    height: 50px;
+    cursor: pointer;
+}
+
+#close:before, #close:after {
+  position: absolute;
+  left: 24px;
+  content: ' ';
+  height: 48px;
+  width: 3px;
+  background-color: #000000;
+}
+
+#close:before {
+  transform: rotate(45deg);
+}
+
+#close:after {
+  transform: rotate(-45deg);
+}
+
+#closeTrue , #closeFalse {
+	background: #ffffff73;
+    border: 2px solid black;
+    width: 30%;
+    height: 95px;
+    display: none;
+    z-index: 1;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    font-size: 34px;
+    text-shadow: -1px 0px white, 0px 1px white, 1px 0px white, 0px -1px white;
+    padding:30px 0;
+    text-align: center;
+    cursor:pointer;
+}
+
+#closeTrue button{
+	width: 66%;
+    margin: auto;
+    float: none;
+    cursor: pointer;
+}
+
+section {
+    width: 1070px;
+    height: 860px;
+    background: #141414;
+    margin: 0 auto;
+    margin-top : 50px;
+    padding: 5px;
+}
+
+#screen {
+    width: 1070px;
+    height: 660px;
+    background: white;
+    overflow: hidden;
+}
+
+#hinter {
+    width: 870px;
+    min-width: 870px;
+    height: 460px;
+    background: rgba(200, 200, 200, 0.5);
+    position: absolute;
+    z-index: 20;
+    font-size: 42px;
+    padding: 100px;
+    display: none;
+    cursor: pointer;
+}
+
+.clicker {
+    position: absolute;
+    z-index: 3;
+}
+
+#dd1 {
+    left: 799px;
+    top: 730px;
+}
+
+/* 알렉스 사무실 단서들 */
+#smallBox {
+	width: 7px;
+    height: 7px;
+    left: 1918px;
+    top: 1035px;
+}
+
+#smallKey {
+    width: 14px;
+    height: 7px;
+    left: 1195px;
+    top: 722px;
+}
+
+/* 카렌 사무실 단서들 */
+#smallLamp {
+	width: 10px;
+    height: 10px;
+    left: 1355px;
+    top: 964px;
+}
+
+#smallLetter {
+    width: 14px;
+    height: 8px;
+    left: 1395px;
+    top: 1195px;
+}
+
+/* 에밀리 사무실 단서들 */
+#smallPaper {
+	width: 7px;
+    height: 7px;
+   	left: 711px;
+    top: 1106px;
+}
+
+.speech {
+    width: 1050px;
+    height: 113px;
+    padding: 10px;
+    background: rgba(30, 30, 30, 0.6);
+    position: absolute;
+    z-index: 3;
+    top: 532px;
+    cursor: pointer;
+    display: none;
+}
+
+.speech h1 {
+    font-size: 30px;
+    width: 1040px;
+    height: 32px;
+    padding: 0px 20px;
+    color: #fff;
+}
+
+.speech p {
+    font-size: 20px;
+    width: 1060px;
+    height: 80px;
+    padding: 10px;
+    color: #eee;
+}
+
+#spc01 {
+    display: block;
+}
+
+#control {
+    width: 1070px;
+    height: 190px;
+    margin-top: 5px;
+}
+
+#pad1 {
+    float: left;
+    width: 214px;
+    height: 190px;
+    margin-left: 107px;
+}
+
+#minimap {
+    width: 60px;
+    height: 60px;
+    background: rgb(200, 200, 200);
+    border-radius: 10px;
+    margin: 55px;
+    padding: 10px;
+}
+
+#space1 {
+    float: left;
+    width: 60px;
+    height: 20px;
+}
+
+#space2 {
+    float: left;
+    width: 20px;
+    height: 20px;
+}
+
+#space3 {
+    float: left;
+    width: 0px;
+    height: 20px;
+}
+
+#dot {
+    float: left;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background: red;
+}
+
+#pad2 {
+    float: left;
+    width: 194px;
+    height: 170px;
+    padding: 10px;
+    margin-left: 107px;
+}
+
+#btl,
+#btr {
+    cursor: pointer;
+}
+
+#btu,
+#btd {
+    margin: 0px 70px;
+    cursor: pointer;
+}
+
+#pad3 {
+    float: left;
+    width: 194px;
+    height: 70px;
+    padding: 60px 10px;
+    margin-left: 107px;
+}
+
+#hint {
+    width: 150px;
+    height: 70px;
+    font-size: 50px;
+    color: #111;
+    border-radius: 15px;
+    cursor: pointer;
+}
+

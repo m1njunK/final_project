@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+#gameCanvas{
+	border : 1px solid black;
+	margin:auto;
+	background:black;
+}
+
+#runIntro{
+    border: 0px solid;
+   	font-size: 35px;
+   	text-align: center;
+   	color: black;
+   	text-shadow: -1px 0px white, 0px 1px white, 1px 0px white, 0px -1px white;
+   	margin-bottom:5%;
+}
+
+#gameCanvasBox{
+   	position: absolute;
+   	left: 25%;
+   	top: 5%;
+}

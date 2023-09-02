@@ -1,0 +1,127 @@
+#endTitle{
+	color: white;
+    text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+    text-align:center;
+    display : none;
+}
+
+#endBox{
+	background-image : url('../img/newsBack.jpg');
+	width: 70%;
+    color: white;
+    text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+    height: 750px;
+    font-size: 25px;
+    text-align: left;
+    margin: auto;
+    border: 3px solid #e5d5d554;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    filter: grayscale(45%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position : center;
+}
+
+#newsPaper{
+	background-image : url('../img/newsPaper.png');
+	width: 100%;
+    color: white;
+    height: 750px;
+    text-align: left;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    filter: grayscale(45%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position : center;
+}
+
+#newsTitle{
+	margin-top: 320px;
+    text-align: center;
+}
+
+#newsProfile{
+    height: 34%;
+    width: 70%;
+    display: flex;
+    margin: 0px auto;
+}
+
+#newsMike{
+	background-size: cover;
+    background-position-x: -40px;
+	margin-right: 1%;
+    margin-left: 10%;
+    width: 40%;
+    background-image : url('../img/mike.png');
+    border-radius: 5px;
+}
+
+#newsWigoAndEmily{
+	background-size:cover;
+	margin-right: 9%;
+    margin-left: 1%;
+    width: 40%;
+    background-image : url('../img/wigoAndEmily.jpg');
+    border-radius: 5px;
+    background-position-x: -13px;
+}
+
+#endClose {
+	filter:none;
+	background: red;
+	font-size: 15pt;
+    border: solid 2px black;
+    border-radius:5px;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+    cursor: pointer;
+    position: absolute;
+    right: 0%;
+}
+
+#endClose:before, #endClose:after {
+  position: absolute;
+  left: 24px;
+  content: ' ';
+  height: 48px;
+  width: 3px;
+  background-color: #000000;
+}
+
+#endClose:before {
+  transform: rotate(45deg);
+}
+
+#endClose:after {
+  transform: rotate(-45deg);
+}
+
+#endHome{
+	height: 95px;
+    text-align: center;
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    z-index: 3;
+    font-size: 20px;
+    display: none;
+    background: #ffffff73;
+    border: 2px solid black;
+    color: black;
+    padding-top: 15px;
+    text-shadow: -1px 0px white, 0px 1px white, 1px 0px white, 0px -1px white;
+}
+
+#endBtn , #endXBtn {
+	margin-top: 30px;
+    width: 35%;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}

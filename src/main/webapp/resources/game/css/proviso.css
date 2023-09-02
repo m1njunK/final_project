@@ -1,0 +1,290 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.items img{
+	cursor: grab;
+}
+
+div {
+    position: relative;
+    border: none;
+}
+
+#provisoBox {
+	font-family: 'Heiro';
+	color: black;
+    text-shadow: -1px 0px white, 0px 1px white, 1px 0px white, 0px -1px white;
+	margin: 100px auto auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+	url('../img/proviso.png');
+	background-size:cover;
+	width : 70%;
+	height : 750px;
+	border:3px solid #e5d5d554;
+	border-radius : 10px;
+	display: flex;
+    flex-direction: column;
+}
+
+#flashLightBox{
+	filter: sepia(1);
+	user-select: none;
+	font-family: 'Heiro';
+	color: black;
+    text-shadow: -1px 0px white, 0px 1px white, 1px 0px white, 0px -1px white;
+	margin: 100px auto auto;
+ 	background : white;
+	width : 70%;
+	height : 750px;
+	border:3px solid #e5d5d554;
+	border-radius : 10px;
+    font-size: 1.8vh;
+	display : none;
+}
+
+#p_letterBox{
+	font-family: 'Heiro';
+	color: white;
+    /* text-shadow: -1px 0px white, 0px 1px white, 1px 0px white, 0px -1px white; */
+	margin: 100px auto auto;
+	background:black;
+	width : 70%;
+	height : 750px;
+	border:3px solid #e5d5d554;
+	border-radius : 10px;
+	display: none;
+	text-align:center;
+	font-size:1.8vh;
+}
+
+#p_docBox{
+	font-family: 'Heiro';
+	color: black;
+	margin: 100px auto auto;
+	background:white;
+	width : 70%;
+	height : 750px;
+	border:3px solid #e5d5d554;
+	border-radius : 10px;
+	display: none;
+	text-align:center;
+}
+
+#p_docTextMain{
+	color: red;
+    font-size: 30px;
+    margin-top: 100px;
+    margin-bottom: 90px;
+    text-decoration: underline;
+}
+
+#p_docText{
+	text-align:left;
+	margin-left:23%;
+	font-size:18px;
+	margin-bottom:50px;
+}
+
+#p_docTextEnd{
+	text-align:right;
+	font-size:18px;
+	margin-right:17%;
+}
+
+#p_itemBox{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top : 60px;
+}
+
+#p_item1 , #p_item2 {
+	background : #ffffff7d;
+	border: 3px solid #00000047;
+    width: 300px;
+    height: 300px;
+    margin: 50px;
+}
+
+#p_item1_img , #p_item2_img {
+	width: 300px;
+	max-height: 300px;
+}
+
+
+#p_btnBox{
+	margin:auto;
+}
+
+#useBtn {
+	font-family: 'Heiro';
+    cursor: pointer;
+    color: black;
+    text-shadow: -1px 0px white, 0px 1px white, 1px 0px white, 0px -1px white;
+    background: #ffffff57;
+    border: 2px solid #e5d5d554;
+    width:150px;
+    height: 60px;
+    font-size: 40px;
+    border-radius: 5px;
+    text-align: center;
+    padding-right: 2px;
+}
+
+#provisoIntro{
+	width:345px;
+    height: 60px;
+	font-size : 30px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: -5%;
+}
+
+#keyAndBox,#lampAndPaper,#itemUseFailed{
+	display:none;
+	transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    border: 2px solid #e5d5d554;
+    z-index: 1;
+    cursor: pointer;
+    text-align: center;
+    width:500px;
+    font-size:30px;
+    background: #ffffff57;
+}
+
+#flashlight {
+	z-index:1;
+	--Xpos:50vw;
+	--Ypos:50vh;
+}
+
+#flashlight:before {
+	border-radius:10px;
+	content: "";
+	display: block;
+	width: 100%;
+	height:750px;
+	position: absolute;
+ 	pointer-events: none;
+	background: radial-gradient(
+    	circle 9em at var(--Xpos) var(--Ypos),
+    	rgba(0, 0, 0, 0),
+   	    rgba(0, 0, 0, 1)
+    );
+}
+
+.p_close {
+	filter:none;
+	background: red;
+	font-size: 15pt;
+    border: solid 2px black;
+    border-radius:5px;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+    cursor: pointer;
+    position: absolute;
+    right: 0%;
+}
+
+.p_close:before, .p_close:after {
+  position: absolute;
+  left: 24px;
+  content: ' ';
+  height: 48px;
+  width: 3px;
+  background-color: #000000;
+}
+
+.p_close:before {
+  transform: rotate(45deg);
+}
+
+.p_close:after {
+  transform: rotate(-45deg);
+}
+
+#p_fname {
+	margin-left:83%;
+	color : #7ced61;
+}
+
+#p_lname{
+	margin-left:83%;
+	color : red;
+}
+
+#p_emilyText{
+	margin-left:2%;
+	color : #7ced61;
+}
+
+.closeText {
+	background: #ffffff73;
+    border: 2px solid black;
+    border-radius:5px;
+    width: 37%;
+    height: 95px;
+    display: none;
+    z-index: 1;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    font-size: 34px;
+    text-shadow: -1px 0px white, 0px 1px white, 1px 0px white, 0px -1px white;
+    padding:30px 0;
+    text-align: center;
+    color:black;
+}
+
+#yes,#no,#p_end{
+	display:inline-block;
+	cursor:pointer;
+}
+
+#p_end{
+	margin-top: 5%;	
+}
+
+#p_closeTrue , #p_closeFalse {
+	background: #ffffff73;
+    border: 2px solid black;
+    width: 49%;
+    height: 100px;
+    display: none;
+    z-index: 1;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    font-size: 3vh;
+    text-shadow: -1px 0px white, 0px 1px white, 1px 0px white, 0px -1px white;
+    padding: 30px 0;
+    text-align: center;
+    cursor: pointer;
+    border-radius:5px;
+}
+
+#p_closeTrue{
+	cursor:none;
+}
+
+#fireImg{
+	background-image : url('../subGame/image/fire.png');
+	position : absolute;
+	width: 264px;
+    height: 176px;
+    left: 57%;
+    top: 34%;
+}

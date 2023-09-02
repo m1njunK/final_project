@@ -1,0 +1,397 @@
+/* 외부 폰트 호출 */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Black+Han+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@300&display=swap');
+
+/* 공통 적용 스타일 */
+* {
+    padding: 0;
+    margin: 0;
+    /*
+	font-weight:bold;
+	text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+	*/
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+	background: black;
+}
+
+.mainWrap{
+	background-color: white;
+	height: 1000px;
+	text-align: center;
+}
+
+/* header */
+/*
+.position-absolute{
+	padding-top: 10px;
+}
+
+.position-absolute a{
+	color: white;
+	z-index: 0;
+}
+
+.position-relative{
+	text-align: center; 
+	padding-top: 3%;
+}
+*/
+
+#memberBox{
+	text-align: right;	
+	margin-top: 10px;
+}
+
+#loginLink{
+	margin: 0px 10px;
+}
+
+#joinLink{
+	margin-right:20px;
+}
+
+#memberBox a{
+	color: white;	
+	text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+}
+
+#memberBox span{
+	color : white;
+}	
+
+
+#memberBox .headerHover{
+	text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;	
+	font-weight:bold;
+}
+
+#memberBox .headerHover:hover{
+	color:#0a58ca;
+}
+
+
+#logoBox{
+	text-align: center;
+}
+
+.navbar-collapse {
+    display: flex!important;
+    flex-basis: auto;
+    justify-content: center;
+}
+
+/* footer */
+#foot_top {
+    text-align: center;
+    font-family: 'Hahmlet', serif;
+    color: orange;
+    border-top: solid orange 1px;
+    text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+}
+
+#foot_top a {
+    color: white;
+}
+
+#foot_top a:hover {
+    color: orange;
+}
+
+#foot_top * {
+    display: inline-block;
+}
+
+#foot_top ul {
+    margin: 5px 0;
+}
+
+#foot_top li {
+    margin: 0 0.5em;
+}
+
+#foot_bot {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Hahmlet', serif;
+	text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+}
+
+#foot_bot li {
+    color: orange;
+}
+
+#foot_bot span {
+    color: white;
+}
+
+#icon * {
+    width: 24px;
+}
+
+#icon {
+    line-height: 5em;
+}
+
+#icon article {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/* 반응형 웹 구현 */
+
+@media screen and (max-width:1231px){
+
+    #nav_menu li{
+        margin: 0 2vw;
+    }
+
+    #main h1{
+        font-size: 5rem;
+    }
+
+    .content li{
+        font-size: 0.9em;
+    }
+
+    .content ul{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:895px)
+    {
+        #h_bot{
+            display: inline-block;
+            text-align: center;
+        }
+
+        #main h1{
+            font-size: 5.5rem;
+        }
+
+        #nav_menu li{
+            margin: 0 4vw;
+        }
+
+        #thema{
+            display: inline-block;
+        }
+
+        #section2{
+            text-align: center;
+        }
+
+        .content *{
+            width: 80vw;
+        }
+
+        .content{
+            margin-bottom: 10vh;
+        }
+
+        .content ul{
+            margin: 0;
+            text-align: left;
+            padding: 1rem;
+        }
+
+        .carousel-inner p{
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+        .notice_img{
+            display: inline-block;
+        }
+
+        .notice_img article{
+            margin-bottom: 20vh;
+        }
+
+        #info_box td{
+            padding-right: 2vw;
+            font-size: 1rem;
+        }
+
+    }
+
+
+/* 반응형 웹 구현(모바일 화면) */
+@media screen and (max-width:680px) {
+    header {
+        text-align: center;
+    }
+
+    #h_bot {
+        display: inline-block;
+    }
+
+    #nav_menu {
+        font-size: 7px;
+    }
+
+    #main {
+        top: 40vh;
+    }
+
+    #main h1 {
+        font-size: 2em;
+    }
+
+    #section1 {
+        height: 80vh;
+    }
+
+    #thema {
+        display: inline-block;
+    }
+
+    .content * {
+        width: 90vw;
+    }
+
+    .content {
+        margin-left: 4vw;
+        margin-bottom: 5vw;
+    }
+
+    .content li {
+        font-size: 0.7em;
+    }
+
+    #carouselExampleInterval {
+        height: 40vh;
+    }
+
+    .carousel-inner {
+        line-height: 40vh;
+    }
+
+    .carousel-inner p {
+        font-size: 0.8em;
+    }
+
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        width: 0.7rem;
+    }
+
+    #login_menu li a {
+        font-size: 0.5em;
+    }
+
+    #foot_top,
+    #foot_bot {
+        font-size: 0.5em;
+    }
+
+    #login_text {
+        font-size: 3.0em;
+    }
+
+    #login_box * {
+        width: 90vw;
+    }
+
+    .info p {
+        font-size: 2em;
+    }
+
+    #join_text {
+        font-size: 3em;
+    }
+
+    #join_box * {
+        width: 90vw;
+    }
+
+    .user_info select {
+        height: 3em;
+        display: block;
+    }
+
+    #Tel input {
+        width: 89vw;
+    }
+
+    #Tel select {
+        width: 40vw;
+        margin-bottom: 2vh;
+    }
+
+    .join_btn {
+        margin-bottom: 15px;
+    }
+
+    #intro_main p {
+        font-size: 0.8em;
+    }
+
+    #intro_mid {
+        box-shadow: 0 0 50px white;
+        padding: 25vh 0;
+    }
+
+    .notice_img {
+        display: inline-block;
+    }
+
+    #info_box td {
+        padding: 0;
+        font-size: 0.5rem;
+    }
+
+    #info_box {
+        width: 80vw;
+    }
+
+    #intro_bot iframe {
+        width: 80vw;
+    }
+
+    #notice_list {
+        font-size: 0.5rem;
+    }
+
+    #post_area {
+        height: auto;
+        width: auto;
+    }
+
+    #icon article {
+        margin: 0 5px;
+    }
+
+    #icon * {
+        width: 16px;
+    }
+
+    #notice_list * {
+        padding: 8px;
+    }
+
+    #post_info {
+        font-size: 0.8em;
+    }
+
+}
+

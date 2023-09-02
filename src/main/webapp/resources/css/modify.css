@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+button {
+       margin-top: 10px;
+       padding: 5px 10px;
+       border: none;
+       background: #3498db;
+       color: #fff;
+       border-radius: 3px;
+       cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+input{
+	width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;		
+}
+
+#modSubmit{
+	margin: 0;	
+}

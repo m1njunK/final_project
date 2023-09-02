@@ -1,0 +1,100 @@
+body {
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 16px;
+    background-color: #f7f7f7;
+}
+/* ================================= */
+.mainWrap{
+	padding: 50px;	
+}
+
+#titleBox{
+	text-align: left;
+	margin: 0 auto;
+}
+
+.memberInfo:hover{
+	cursor: pointer;
+	color: #3366cc;
+	font-weight: bolder;
+	font-size: 15px;
+}
+
+#userInfo{
+	width: 30%;
+	margin: 0 auto;
+}
+
+input[type='button']{
+    padding: 5px 10px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+input[type='button']:hover {
+    background-color: #0056b3;
+}
+
+.th{
+	width: 20%;	
+}
+/* ================================ */
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+section.wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 50px;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr td,
+table tr th {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.button {
+    background-color: #1abc9c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #16a085;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+}

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-5.8.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="loginSuccessHandler"
+	 class="com.bitc.project.security.LoginSuccessHandler"/>
+	 
+	<bean id="accessDeniedHandler" 
+	 class="com.bitc.project.security.CustomAccessDeniedHandler"/>
+	 
+	<security:http pattern="/resources/**" security="none"/>
+
+	<security:http>
+	
+	<security:csrf disabled="true"/>
+	
+		<security:form-login 
+		login-page="/login/login" 
+		username-parameter="id" 
+		password-parameter="pass"
+		login-processing-url="/login/login" 
+		authentication-success-handler-ref="loginSuccessHandler"/>
+		
+		 <security:remember-me
+			 remember-me-cookie="autoLogin"
+			 remember-me-parameter="autoLogin" 
+			 token-validity-seconds="604800"/>
+		
+		 <security:session-management>
+			<security:concurrency-control 
+			 error-if-maximum-exceeded="false" 
+			 max-sessions="1" 
+			 expired-url="/logOff"/>
+		</security:session-management> 
+
+		<security:access-denied-handler
+				  ref="accessDeniedHandler"/>
+		
+		<!-- 로그아웃 처리 -->
+		<security:logout 
+				logout-url="/login/logout" 
+				logout-success-url="/" 
+				delete-cookies="autoLogin"/> 
+				
+		<security:intercept-url 
+				  pattern="/management/**" 
+				  access="hasRole('ROLE_ADMIN')"/>		
+				  
+		<security:intercept-url 
+				  pattern="/user/**" 
+				  access="hasAnyRole('ROLE_USER','ROLE_ADMIN')"/>
+				  
+		<security:intercept-url 
+				  pattern="/login/logout" 
+				  access="authenticated"/>
+				  
+		<security:intercept-url
+				  pattern="/note/note"
+				  access="hasAnyRole('ROLE_USER','ROLE_ADMIN')"/>
+				  
+	    <security:intercept-url 
+	    		  pattern="/logOff" 
+	    		  access="permitAll"/>
+	    		  
+	    <security:intercept-url 
+				  pattern="/" 
+				  access="permitAll"/>
+				  
+		<security:intercept-url 
+				  pattern="/notice/newNotice" 
+				  access="hasRole('ROLE_ADMIN')"/>	
+				  
+		<security:intercept-url 
+				  pattern="/notice/editNotice" 
+				  access="hasRole('ROLE_ADMIN')"/>	
+				
+		<security:intercept-url 
+				  pattern="/qna/editQna" 
+				  access="hasRole('ROLE_ADMIN')"/>
+				  
+  		<security:intercept-url 
+				  pattern="/qna/newQna" 
+				  access="hasRole('ROLE_ADMIN')"/>			  
+				  
+		<security:intercept-url 
+				  pattern="/freeBoard/freeBoard_Form" 
+				  access="hasAnyRole('ROLE_USER','ROLE_ADMIN')"/>
+	  <security:intercept-url 
+				  pattern="/freeBoard/freeBoard_modify" 
+				  access="hasAnyRole('ROLE_USER','ROLE_ADMIN')"/>
+	  
+	  <security:intercept-url 
+				  pattern="/imageBoard/imgBoard_Form" 
+				  access="hasAnyRole('ROLE_USER','ROLE_ADMIN')"/>
+	  <security:intercept-url 
+				  pattern="/iamgeBoard/imgBoard_modify" 
+				  access="hasAnyRole('ROLE_USER','ROLE_ADMIN')"/>
+	  
+	  <security:intercept-url 
+				  pattern="/chat/*" 
+				  access="hasAnyRole('ROLE_USER','ROLE_ADMIN')"/>
+				
+	</security:http>
+	
+	<bean id="customUsersDetail" 
+		  class="com.bitc.project.security.user.CustomUserDetailsService"/>
+
+	<bean id="bcriptPasswordEncoder"
+		class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
+	
+	<security:authentication-manager>
+		<security:authentication-provider
+			 user-service-ref="customUsersDetail">
+			 <security:password-encoder ref="bcriptPasswordEncoder"/>
+		</security:authentication-provider>
+	</security:authentication-manager>
+	
+</beans>

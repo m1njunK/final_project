@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 전체화면에 백그라운드 잡음 */
+html {
+	background-image: url(../images/test/back.png);
+}
+
+/* form-logo */
+.form_logo{
+	margin : 55px;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 6%;
+  margin-left: 12%;
+  padding-right: 50px;
+}
+
+#logo {width:100px; position: absolute;
+margin-left:40px;
+}
+
+/* 임시로 사이드 로고이미지 원래 사이즈는 width:400px height:650px */
+
+#side_logo{ border:solid 2px black;
+  display:block;
+width:488px; height: 650px;
+background-image: url(../images/loginIMG/side_logo.jpg);
+background-size: cover;}
+
+.login-form h1 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.int-area {
+  
+  width: 400px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.int-area:first-child {
+  margin-top: 0;
+}
+
+.int-area input {
+  margin-left: 12%; 
+  width: 80%;
+  padding: 20px 10px 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 18px;
+  outline: none;
+}
+
+.int-area label {
+  margin-left: 12%;
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  font-size: 18px;
+  transition: top 0.5s ease;
+}
+
+.int-area label.warning {
+  color: red !important;
+  animation: warning 0.3s ease;
+  animation-iteration-count: 3;
+}
+
+@keyframes warning {
+  0% {
+    transform: translateX(-8px);
+  }
+  25% {
+    transform: translateX(8px);
+  }
+  50% {
+    transform: translateX(-8px);
+  }
+  75% {
+    transform: translateX(8px);
+  }
+}
+
+.int-area input:focus + label,
+.int-area input:valid + label {
+  top: -2px;
+  font-size: 13px;
+  color: #000000;
+}
+
+.login_btn {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.login_btn button {
+  width: 80%;
+  height: 50px;
+  color: #fff;
+  background-color: #000000;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.caption {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.caption a {
+  margin: 0 20px;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+@media screen and (max-width:850px) {
+  #side_logo {width:0px; height: 0px; border: none;}
+  
+}
+
+@media screen and (max-width:300px) {
+  #logo {position: relative; left:50px;}
+  .int-area {position: relative; left:50px;
+  }
+  #id , #pw {width:200px;}
+  .login_btn{width:85%;
+  margin-left: 8%;}
+  .caption {margin-left: 8%;}
+}
+
+/* 체크박스 */
