@@ -32,13 +32,13 @@
 
 ## :family: 멤버
 
-- 👑 [@pangilK](https://github.com/pangilK) : 게임 제작, ai 챗봇
+- 👑 [@pangilK](https://github.com/pangilK) : 게임 제작, aiChat
 
 - ✋ [@m1njunK](https://github.com/m1njunK) : 자유게시판, 이미지게시판, 채팅, 회원관리
 
-- [@hyejeongspace](https://github.com/hyejeongspace) : 공지사항, QnA, 채팅
+- 👉 [@hyejeongspace](https://github.com/hyejeongspace) : 공지사항, QnA, 채팅
 
-- [@smetmoney](https://github.com/smetmoney) : 로그인, 회원가입, 쪽지, 회원관리
+- 👉 [@smetmoney](https://github.com/smetmoney) : 로그인, 회원가입, 쪽지, 회원관리
 
 ## :gear: 개발환경
 
@@ -63,7 +63,7 @@
 ### 기타 도구
 - 개발 툴: Spring Tool Suite (STS), GitHub
 - 웹소켓채팅 : SockJS
-- 챗봇 : ChatGPT API
+- AiChat : ChatGPT API
 - 클라우드 서비스: AWS (EC2, RDS)
 - 버전 관리: Git (GitHub)
 - 웹 서비스 인터페이스: REST API
