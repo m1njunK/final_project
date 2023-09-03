@@ -34,7 +34,7 @@
 
 - 👑 [@pangilK](https://github.com/pangilK) : 게임 제작, aiChat
 
-- ✋ [@m1njunK](https://github.com/m1njunK) : 자유게시판, 이미지게시판, 채팅, 회원관리
+- ✋ &nbsp;[@m1njunK](https://github.com/m1njunK) : 자유게시판, 이미지게시판, 채팅, 회원관리
 
 - 👉 [@hyejeongspace](https://github.com/hyejeongspace) : 공지사항, QnA, 채팅
 
