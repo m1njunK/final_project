@@ -44,8 +44,9 @@
 - 텍스트 에디터: TinyMCE
 
 ### Backend
-- 언어 및 프레임워크: Java
+- 언어: Java
 - Spring Framework: AOP, Interceptor, Spring Security
+- ORM: Mybatis
 - 데이터베이스: MySQL
 - 프로젝트 관리 도구: Maven
 
@@ -58,6 +59,7 @@
 ### 기타 도구
 - 개발 툴: Spring Tool Suite (STS), GitHub
 - 웹소켓채팅 : SockJS
+- 챗봇 : ChatGPT API
 - 클라우드 서비스: AWS (EC2, RDS)
 - 버전 관리: Git (GitHub)
 - 웹 서비스 인터페이스: REST API
