@@ -32,13 +32,13 @@
 
 ## :family: 멤버
 
-- 👑 [김판길](https://github.com/pangilK) : 게임 제작, ai 챗봇
+- 👑 [@pangilK](https://github.com/pangilK) : 게임 제작, ai 챗봇
 
-- ✋ [김민준](https://github.com/m1njunK) : 자유게시판, 이미지게시판, 채팅, 회원관리
+- ✋ [@m1njunK](https://github.com/m1njunK) : 자유게시판, 이미지게시판, 채팅, 회원관리
 
-- [김혜정](https://github.com/hyejeongspace) : 공지사항, QnA, 채팅
+- [@hyejeongspace](https://github.com/hyejeongspace) : 공지사항, QnA, 채팅
 
-- [이수석](https://github.com/smetmoney) : 로그인, 회원가입, 쪽지, 회원관리
+- [@smetmoney](https://github.com/smetmoney) : 로그인, 회원가입, 쪽지, 회원관리
 
 ## :gear: 개발환경
 
