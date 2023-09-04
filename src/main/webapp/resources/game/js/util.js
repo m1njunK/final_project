@@ -3,6 +3,32 @@ function scrollToBottom(div) {
     div.scrollTo(0, div.scrollHeight);
 }
 
+// 윈도우 시작후 ENTER키 이벤트 핸들러 gameBox에 마우스가 올라갈땐 활성화 
+gameBox.addEventListener('mouseenter', function () {
+    document.addEventListener('keypress', keyPressHandler);
+});
+// gameBox에서 마우스가 벗어나면 비활성화
+gameBox.addEventListener('mouseleave', function () {
+    document.removeEventListener('keypress', keyPressHandler);
+});
+
+// 클릭 이벤트 핸들러 추가
+gameBox.addEventListener('click', function () {
+    // keyPressHandler 함수를 클릭 이벤트에서도 호출
+    keyPressHandler({ key: 'Enter' });
+});
+
+function keyPressHandler(event) {
+   const sceneObject = window["scene" + scene];
+   if (event.key === 'Enter' && sys_isEnter && isSys && !isAction) {
+       scrollToBottom(systemText);
+       displayText(sceneObject);
+   } else if (event.key === 'Enter' && sys_isEnter && !isSys && isAction) {
+       scrollToBottom(systemText);
+       createAction(sceneObject);
+   }
+}
+
 function itemListOpen() {
     $('.items').toggle(300);
 }

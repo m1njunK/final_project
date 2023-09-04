@@ -13,10 +13,9 @@
 <script src="${path}/resources/game/js/scene.js"></script>
 <script src="${path}/resources/game/js/find.js"></script>
 <script src="${path}/resources/game/js/proviso.js"></script>
-<script src="${path}/resources/game/js/util.js"></script>
 </head>
 <body>
-	<audio src="${path}/resources/game/sound/demo2_1.mp3" loop autoplay id="bgm"></audio>
+	<audio src="${path}/resources/game/sound/back.mp3" loop autoplay id="bgm"></audio>
 	<div id="start_1">
 		<h6 id="main">게임에 오신걸 환영합니다.</h6>
 		<h6 id="typing"></h6>
@@ -48,6 +47,7 @@
 	<jsp:include page="common/end.jsp" />	
 </body>
 <script src="${path}/resources/game/js/game.js"></script>
+<script src="${path}/resources/game/js/util.js"></script>
 <script src="${path}/resources/game/js/nickcheck.js"></script>
 <script src="${path}/resources/game/js/collision.js"></script>
 <script src="${path}/resources/game/js/runWigoAndEmily.js"></script>

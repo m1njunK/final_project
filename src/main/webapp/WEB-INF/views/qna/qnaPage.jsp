@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <jsp:include page="../common/header.jsp" />
 <link rel="stylesheet" href="../resources/css/qna.css">
@@ -8,13 +9,11 @@
 		<h1>자주 들어오는 질문</h1>
 	</div>
 	<div class="newQnaBtn">
-		<c:choose>
-			<c:when test="${userInfo.id eq 'admin'}">
-				<form action="newQna" method="Get" >
-					<input type="submit" value="새로운 QnA 작성하기" class="newBtn">
-				</form>
-			</c:when>
-		</c:choose>
+		<sec:authorize access="hasRole('ROLE_ADMIN')">
+			<form action="newQna" method="Get" >
+				<input type="submit" value="새로운 QnA 작성하기" class="newBtn">
+			</form>
+		</sec:authorize>
 	</div>
 	<hr/>
 	<div class="qnaList">
@@ -25,14 +24,12 @@
 			        	<tr class="qnaTitle">
 			            	<th>
 			            	<div class="editQnaBtn">
-								<c:choose>
-									<c:when test="${userInfo.id eq 'admin'}">
+			            		<sec:authorize access="hasRole('ROLE_ADMIN')">
 										<form action="editQna" method="GET" >
 										 	<input type="hidden" name="qnaId" value="${con.qnaId}">
 											<input type="submit" value="QnA 수정" class="editBtn">
 										</form>
-									</c:when>
-								</c:choose>
+									</sec:authorize>
 							</div>
 			            	Q. ${con.questionTitle}
 			            	</th>
@@ -77,11 +74,9 @@ $(document).ready(function() {
             }
         });
     });
-
     function adjustBodyHeight(newHeight) {
         $(".mainWrap").css("height", "+=" + newHeight);
     }
-
     function resetBodyHeight(newHeight) {
         $(".mainWrap").css("height", "-=" + newHeight);
     }

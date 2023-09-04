@@ -2,6 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <jsp:include page="../common/header.jsp" />
 <link rel="stylesheet" href="../resources/css/notice.css">
@@ -24,13 +25,11 @@
 		
 	</div>
 	<div class="newNotice">
-		<c:choose>
-			<c:when test="${userInfo.id eq 'admin'}">
-				<form action="newNotice" method="Get" >
-					<input type="submit" value="공지사항 작성하기" class="newBtn">
-				</form>
-			</c:when>
-		</c:choose>
+	<sec:authorize access="hasRole('ROLE_ADMIN')">
+			<form action="newNotice" method="Get" >
+				<input type="submit" value="공지사항 작성하기" class="newBtn">
+			</form>
+		</sec:authorize>
 	</div>
 	<hr/>
 	<div class="noticeDetail">
@@ -48,11 +47,11 @@
 					</c:otherwise>
 				</c:choose>
 		    <span class="nameSpace">최종수정일</span> <span class="space">&nbsp;&nbsp;&nbsp;<fmt:formatDate value="${vo.updatedate}" type="both" dateStyle="full"/></span>
-		    <br/>${vo.content}
-		    
-		  
+		    <br/>
+		    <div class="NoticeContentText">
+		    	${vo.content}
+		    </div>
 
-		    
 		    <div class="countDiv">
 			    <span class="nameSpace">조회수</span><br/><div class="viewDiv"><b>${vo.vcnt}</b></div>
 		    </div>
@@ -91,16 +90,13 @@
 			<div class="backBtnDiv">
 				<a href="${path}/notice/noticeList" class="backBtn">[목록으로]</a>
 			</div>
-		    <c:choose>
-			<c:when test="${userInfo.id eq 'admin'}">
+			<sec:authorize access="hasRole('ROLE_ADMIN')">
 				<form action="editNotice" method="Get"  id="editNoticeform">
 					<input type="hidden" name="bno" value="${vo.bno}"/> 
 					<input type="submit" value="편집하기" id="editBtn">
 					<input type="button" value="삭제하기" id="delBtn">
-					
 				</form>
-			</c:when>
-		</c:choose>
+			</sec:authorize>
 	</div>
 	<c:if test="${!empty userInfo}">
     		<div id="commentWriteBox">

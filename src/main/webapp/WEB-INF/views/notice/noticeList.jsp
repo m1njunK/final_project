@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <jsp:include page="../common/header.jsp" />
 <link rel="stylesheet" href="../resources/css/notice.css">
@@ -11,13 +12,11 @@
 		
 	</div>
 	<div class="newNotice">
-		<c:choose>
-			<c:when test="${userInfo.id eq 'admin'}">
-				<form action="newNotice" method="Get" >
-					<input type="submit" value="공지사항 작성하기" class="newBtn">
-				</form>
-			</c:when>
-		</c:choose>
+		<sec:authorize access="hasRole('ROLE_ADMIN')">
+			<form action="newNotice" method="Get" >
+				<input type="submit" value="공지사항 작성하기" class="newBtn">
+			</form>
+		</sec:authorize>
 	</div>
 	<hr/>
 	<div class="noticeList">

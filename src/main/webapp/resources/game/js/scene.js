@@ -417,6 +417,6 @@ window.scene14 = {
         }
     ],
     action: "END",
-    sound: ""
+    sound: "ending"
 };
 }
