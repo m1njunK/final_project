@@ -20,6 +20,9 @@
 
 ### 💌 쪽지 기능
 - 사용자들끼리 개별적으로 쪽지를 주고 받을 수 있어 더 개인적인 소통이 가능합니다. 비밀 메시지를 주고 받으며 친밀도를 높이세요.
+
+# LINK
+[<img src="https://img.shields.io/badge/바로가기-E34F26?style=for-the-badge&logo=&logoColor=white">](http://13.124.134.101:8080/project/)
  
 <br>
 
